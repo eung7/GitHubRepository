@@ -13,17 +13,25 @@ class RepositoryListViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = organization + " Repositories"
+        setupRefresh()
         
-        self.refreshControl = UIRefreshControl() // 당겨서 새로고침
+        title = organization + " Repositories"
+            
+        tableView.register(RepositoryListCell.self, forCellReuseIdentifier: "RepositoryListCell")
+        tableView.rowHeight = 140
+    }
+    
+    private func setupRefresh() {
+        self.refreshControl = UIRefreshControl()
         let refreshControl = self.refreshControl
         refreshControl?.backgroundColor = .systemBackground
         refreshControl?.tintColor = .darkGray
         refreshControl?.attributedTitle = NSAttributedString(string: "당겨서 새로고침")
-//        refreshControl?.addTarget(self, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        refreshControl?.addTarget(self, action: #selector(didChangedRefresh), for: .valueChanged)
+    }
+    
+    @objc func didChangedRefresh() {
         
-        tableView.register(RepositoryListCell.self, forCellReuseIdentifier: "RepositoryListCell")
-        tableView.rowHeight = 140
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
