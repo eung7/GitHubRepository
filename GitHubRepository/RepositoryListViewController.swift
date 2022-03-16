@@ -34,6 +34,12 @@ class RepositoryListViewController : UITableViewController {
         
     }
 
+}
+
+
+// DataSource, delegate
+extension RepositoryListViewController {
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(
@@ -42,5 +48,9 @@ class RepositoryListViewController : UITableViewController {
         ) as? RepositoryListCell else { return UITableViewCell() }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
 }
