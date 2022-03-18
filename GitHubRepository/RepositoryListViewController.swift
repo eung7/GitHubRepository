@@ -35,7 +35,10 @@ class RepositoryListViewController : UITableViewController {
     }
     
     @objc func didChangedRefresh() {
-        
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return } 
+            self.fetchRepositories(of: self.organization)
+        }
     }
     
     // 네트워크를 통해 Json을 가져옴 -> Repository로 변환 -> BehaviorSubject로 onNext 하는 메서드
