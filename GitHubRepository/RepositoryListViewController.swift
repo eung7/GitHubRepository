@@ -36,7 +36,7 @@ class RepositoryListViewController : UITableViewController {
     
     @objc func didChangedRefresh() {
         DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let self = self else { return } 
+            guard let self = self else { return }
             self.fetchRepositories(of: self.organization)
         }
     }
@@ -109,11 +109,25 @@ extension RepositoryListViewController {
             for: indexPath
         ) as? RepositoryListCell else { return UITableViewCell() }
         
+        var currentRepo : Repository? {
+            do {
+                return try repositories.value()[indexPath.row]
+            } catch {
+                return nil
+            }
+        }
+        
+        cell.repository = currentRepo
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        do {
+            return try repositories.value().count
+        } catch {
+            return 0
+        }
     }
 }
 
