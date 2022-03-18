@@ -14,6 +14,7 @@
 		E5FF751227E1EC9100294D0E /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF751127E1EC9100294D0E /* RepositoryListViewController.swift */; };
 		E5FF751427E1EDF400294D0E /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF751327E1EDF400294D0E /* RepositoryListCell.swift */; };
 		E5FF751727E1EE1600294D0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E5FF751627E1EE1600294D0E /* SnapKit */; };
+		E5FF754127E43A3300294D0E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF754027E43A3200294D0E /* Repository.swift */; };
 		FA613282C7D2631A07CD4FAC /* Pods_GitHubRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A6A0B1FECFB0E495AFDE65 /* Pods_GitHubRepository.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		E5FF750B27E19DDA00294D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5FF751127E1EC9100294D0E /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
 		E5FF751327E1EDF400294D0E /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
+		E5FF754027E43A3200294D0E /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E5FF74FD27E19DD800294D0E /* AppDelegate.swift */,
 				E5FF74FF27E19DD800294D0E /* SceneDelegate.swift */,
 				E5FF751127E1EC9100294D0E /* RepositoryListViewController.swift */,
+				E5FF754027E43A3200294D0E /* Repository.swift */,
 				E5FF751327E1EDF400294D0E /* RepositoryListCell.swift */,
 				E5FF750627E19DDA00294D0E /* Assets.xcassets */,
 				E5FF750827E19DDA00294D0E /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 			files = (
 				E5FF74FE27E19DD800294D0E /* AppDelegate.swift in Sources */,
 				E5FF750027E19DD800294D0E /* SceneDelegate.swift in Sources */,
+				E5FF754127E43A3300294D0E /* Repository.swift in Sources */,
 				E5FF751227E1EC9100294D0E /* RepositoryListViewController.swift in Sources */,
 				E5FF751427E1EDF400294D0E /* RepositoryListCell.swift in Sources */,
 			);

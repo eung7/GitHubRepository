@@ -4,7 +4,7 @@
 //
 //  Created by 김응철 on 2022/03/16.
 //
-
+ 
 import UIKit
 
 class RepositoryListViewController : UITableViewController {
@@ -41,7 +41,6 @@ class RepositoryListViewController : UITableViewController {
 extension RepositoryListViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "RepositoryListCell",
             for: indexPath
@@ -54,3 +53,4 @@ extension RepositoryListViewController {
         return 5
     }
 }
+
